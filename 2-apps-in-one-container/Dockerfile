@@ -5,8 +5,8 @@ RUN apk add --no-cache --update supervisor curl busybox-extras && \
     mkdir -p /etc/supervisor/conf.d
 
 WORKDIR '/app'
-COPY hello-app.jar ./hello-app.jar
-COPY world-app.jar ./world-app.jar
+COPY apps/hello-app.jar ./hello-app.jar
+COPY apps/world-app.jar ./world-app.jar
 
 COPY supervisor.conf /etc/supervisor.conf
 
